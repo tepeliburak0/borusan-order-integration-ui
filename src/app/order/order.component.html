@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="col-md-3">
+    <h3>{{title}}</h3>
+  </div>
+  <div class="col-md-9"> 
+    
+    <table class="table table-striped">
+      <thead >
+        <tr>
+          <th scope="col">Seçiniz</th>
+          <th scope="col">Müşteri Sipariş No</th>
+          <th scope="col">Çıkış Adresi</th>
+          <th scope="col">Varış Adresi</th>
+          <th scope="col">Miktar</th>
+          <th scope="col">Miktar Birim</th>
+          <th scope="col">Ağırlık</th>
+          <th scope="col">Ağırlık Birim</th>
+          <th scope="col">Malzeme Kodu</th>
+          <th scope="col">Not</th>
+          <th scope="col">Statü</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let order of orders">
+            <button mat-raised-button (click)="openDialog()">Güncelle</button>
+          <td scope="row">{{order.customerOrderId}}</td>
+          <td scope="row">{{order.outputAdress}}</td>
+          <td scope="row">{{order.inputAdress}}</td>
+          <td scope="row">{{order.quantity}}</td>
+          <td scope="row">{{order.quantityUnit}}</td>
+          <td scope="row">{{order.weight}}</td>
+          <td scope="row">{{order.weightUnit}}</td>
+          <td scope="row">{{order.stockId}}</td>
+          <td scope="row">{{order.note}}</td>
+          <td scope="row">{{order.status}}</td>
+    
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
